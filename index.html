@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>ROCK-PAPER-SCISSOR</title>
+</head>
+<body style="background-color: black;">
+  <h1 style="color: azure; font-size:large; margin-top:40px; margin-left:20px">Let's Play ROCK PAPER SCISSORS</h1>
+  <section id="images">
+    <div class="img">
+      <img onclick="playGame('rock')" class="rock" src="rock.png">
+      <img onclick="playGame('paper')" class="paper" src="paper.png">
+      <img onclick="playGame('scissors')" class="scissor" src="scissor.png">
+    </div>
+  </section>
+
+  <section>
+    <button onclick="showScore()" class="score">Score</button>
+  </section>
+
+  <script>
+    let score = 0;
+
+    function playGame(userChoice) {
+      const choices = ['rock', 'paper', 'scissors'];
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+      alert('Computer chose: ' + computerChoice);
+
+      console.log('Computer chose: ' + computerChoice);
+
+      if (userChoice === computerChoice) {
+        console.log('It\'s a tie!');
+      } else if (
+        (userChoice === 'rock' && computerChoice === 'scissors') ||
+        (userChoice === 'paper' && computerChoice === 'rock') ||
+        (userChoice === 'scissors' && computerChoice === 'paper')
+      ) {
+        score++;
+        console.log('You won!');
+      } else {
+        console.log('You lost! Computer chose ' + computerChoice);
+      }
+    }
+
+    function showScore() {
+      alert('Your score: ' + score);
+    }
+  </script>
+</body>
+</html>

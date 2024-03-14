@@ -1,0 +1,36 @@
+.rock{
+  
+  height: 190px;
+  margin-top: 160px;
+  cursor: pointer;
+
+}
+.paper{
+  
+  margin-top: 170px;
+  height: 210px;
+  width: 160px;
+  cursor: pointer;
+ 
+
+}
+.scissor{
+  margin-top: 190px;
+  height: 160px;
+  cursor: pointer;
+
+}
+.img{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+
+}
+.score{
+  margin-top: 20px;
+  margin-left: 680px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
